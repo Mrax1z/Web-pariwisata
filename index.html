@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Trendcast</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-bg {
+            background: linear-gradient(to right, #80b4a1 50%, white 50%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #80b4a1;
+            clip-path: url(#wavePath);
+        }
+
+        .content-box {
+            padding: 40px;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .carousel-container {
+            border: 3px solid #ff6b35;
+            padding: 10px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn-explore {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-explore:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#"><strong>TravelTrendcast</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinasi.html">Destinasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid custom-bg">
+        <div class="wave-container">
+            <svg width="0" height="0">
+                <defs>
+                    <clipPath id="wavePath" clipPathUnits="objectBoundingBox">
+                        <path d="M0,0.8 C0.4,0.4 0.6,0 1,0.2 L1,1 L0,1" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <div class="wave"></div>
+        </div>
+        
+        <div class="row w-100">
+            <!-- Text Content -->
+            <div class="col-lg-6">
+                <div class="content-box">
+                    <h1 class="display-4 fw-bold mb-4">Explore Keindahan Indonesia</h1>
+                    <p class="lead mb-4">
+                        Temukan destinasi wisata terbaik di seluruh penjuru Indonesia. Dari pantai eksotis hingga gunung 
+                        perkasa, jelajahi pengalaman tak terlupakan bersama kami.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-explore">Mulai Petualangan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="carousel-container">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner ratio ratio-16x9">
+                            <div class="carousel-item active">
+                                <img src="" class="d-block w-100 rounded" alt="Pantai Lamaru">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/bekapai.jpg" class="d-block w-100 rounded" alt="Taman Bekapai">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <p>&copy; 2025 TravelTrendcast. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
