@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#"><strong>Tripadvisor</strong></a>
+        <a class="navbar-brand fw-bold" href="#"><strong>Pesona Balikpapan</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Destinasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Destinasi</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -49,13 +48,10 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Jl. Mulawarman 76115 Balikpapan</span>
                         </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
+                        <div class="likes">
+                            <i class="fas fa-heart like-btn" data-id="1"></i>
+                            <span class="like-count" id="like-count-1">1200</span>
+                        </div>                        
                         <p>Pantai Lamaru adalah destinasi wisata pantai yang sangat cocok untuk dikunjungi oleh keluarga, teman, atau pasangan. Pantai ini menawarkan keindahan alam yang memukau, fasilitas yang lengkap, dan berbagai aktivitas yang menyenangkan.</p>
                         <a href="lamaru/lamaru.html" class="btn">Explore</a>
                     </div>
@@ -74,13 +70,10 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Jl. Jenderal Sudirman No.86, RT.11, Damai, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76114</span>
                         </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="likes">
+                            <i class="fas fa-heart like-btn" data-id="2"></i>
+                            <span class="like-count" id="like-count-2">900</span>
+                        </div> 
                         <p>Ruang hijau di tengah kota Balikpapan yang asri dan nyaman dengan fasilitas tempat duduk, jalur pejalan kaki, dan air mancur. Ikon kota Balikpapan ini juga dilengkapi dengan instalasi seni modern yang menarik.</p>
                         <a href="bekapai/bekapai.html" class="btn">Explore</a>
                     </div>
@@ -99,21 +92,18 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Karang Joang, Balikpapan Utara, Kota Balikpapan, Kalimantan Timur</span>
                         </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="likes">
+                            <i class="fas fa-heart like-btn" data-id="3"></i>
+                            <span class="like-count" id="like-count-3">300</span>
+                        </div> 
                         <p>Destinasi wisata alam di Balikpapan dengan konsep edukasi dan petualangan. Pengunjung dapat menikmati berbagai kegiatan outdoor dan belajar tentang lingkungan.</p>
                         <a href="wanadesa/wanadesa.html" class="btn">Explore</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Destination Card 4 -->
-            <div class="col">
+             <!-- Destination Card 4 -->
+             <div class="col">
                 <div class="destination-card">
                     <div class="card-image">
                         <img src="img/bukit-bengkirai.webp" alt="Bukit Bangkirai">
@@ -124,34 +114,56 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Karya Merdeka, Kec. Samboja, Kabupaten Kutai Kartanegara, Kalimantan Timur</span>
                         </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="likes">
+                            <i class="fas fa-heart like-btn" data-id="4"></i>
+                            <span class="like-count" id="like-count-4">200</span>
+                        </div> 
                         <p>Kawasan wisata alam di Kutai Kartanegara yang menawarkan keindahan hutan hujan tropis alami. Daya tarik utama tempat ini adalah jembatan gantung yang menghubungkan pohon-pohon raksasa.</p>
                         <a href="bengkirai/bengkrai.html" class="btn">Explore</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Add more destination cards as needed -->
         </div>
     </section>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2025 Tripadvisor. All rights reserved.</p>
-            <p>Follow us on:
-                <a href="#" class="text-white text-decoration-none">Facebook</a> | 
-                <a href="#" class="text-white text-decoration-none">Twitter</a> | 
-                <a href="#" class="text-white text-decoration-none">Instagram</a>
-            </p>
+            <p>&copy; 2025 Pesona Balikpapan. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".like-btn").forEach(button => {
+                const postId = button.getAttribute("data-id");
+                const likeCountElement = document.getElementById(`like-count-${postId}`);
+                
+                // Cek apakah sudah di-like sebelumnya
+                let liked = localStorage.getItem(`liked-${postId}`);
+                if (liked) {
+                    button.classList.add("liked");
+                }
+                
+                button.addEventListener("click", function() {
+                    let currentLikes = parseInt(likeCountElement.textContent);
+                    if (button.classList.contains("liked")) {
+                        button.classList.remove("liked");
+                        localStorage.removeItem(`liked-${postId}`);
+                        likeCountElement.textContent = currentLikes - 1;
+                    } else {
+                        button.classList.add("liked");
+                        localStorage.setItem(`liked-${postId}`, true);
+                        likeCountElement.textContent = currentLikes + 1;
+                    }
+                });
+            });
+        });
+    </script>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

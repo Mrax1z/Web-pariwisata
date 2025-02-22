@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Trendcast</title>
+    <title>Pesona Balikpapan</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
@@ -28,60 +26,72 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <div class="row g-4">
-            <div class="col-md-6">
+    <!-- Hero Section -->
+    <section class="text-center bg-light py-5">
+        <div class="container">
+            <h1 class="fw-bold">Jelajahi Keindahan Balikpapan</h1>
+            <p class="lead">Temukan destinasi wisata terbaik dan nikmati pengalaman yang tak terlupakan.</p>
+        </div>
+    </section>
+
+    <!-- Carousel / Card Slider -->
+    <div id="carouselDestinasi" class="carousel slide container my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
                 <div class="card shadow-sm">
                     <img src="img/lamaru.jpg" class="card-img-top" alt="Pantai Lamaru">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Pantai Lamaru</h5>
-                        <p class="card-text">Pantai Lamaru is a beautiful beach located in Balikpapan, East Kalimantan. Known for its serene environment and clear waters, it is a perfect destination for those looking to relax and enjoy nature.</p>
+                        <p class="card-text">Pantai Lamaru, permata tersembunyi di Balikpapan, menawarkan pesona alam yang memikat dengan pasir putih keabu-abuan yang lembut dan deretan pohon cemara.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="carousel-item">
                 <div class="card shadow-sm">
                     <img src="img/bekapai.jpg" class="card-img-top" alt="Taman Bekapai">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Taman Bekapai</h5>
-                        <p class="card-text">Taman Bekapai is a popular park in Balikpapan, offering a green oasis in the middle of the city. It is a great place for a leisurely stroll or a picnic with family and friends.</p>
+                        <p class="card-text">Taman hijau di tengah kota, tempat ideal untuk bersantai.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="carousel-item">
                 <div class="card shadow-sm">
                     <img src="img/wanadesa.jpeg" class="card-img-top" alt="Investigative Eating">
-                    <div class="card-body">
-                        <h5 class="card-title">Investigative Eating</h5>
-                        <p class="card-text">Investigative Eating is a unique culinary experience that allows visitors to explore the diverse flavors of Indonesian cuisine. From street food to fine dining, there is something for everyone.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wanadesa</h5>
+                        <p class="card-text">Wanadesa Balikpapan, atau Ekowisata Bamboe Wanadesa, adalah destinasi wisata alam yang menawarkan keindahan hutan bambu yang rindang dan asri, serta suasana waduk yang menenangkan.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="carousel-item">
                 <div class="card shadow-sm">
                     <img src="img/bukit-bengkirai.webp" class="card-img-top" alt="Serenity Escapes">
-                    <div class="card-body">
-                        <h5 class="card-title">Serenity Escapes</h5>
-                        <p class="card-text">Serenity Escapes offers a tranquil retreat for those looking to escape the hustle and bustle of city life. With its peaceful surroundings and luxurious amenities, it is the perfect place to unwind and rejuvenate.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bukit Bengkirai</h5>
+                        <p class="card-text">Bukit Bangkirai merupakan sebuah kawasan konservasi yang dikelola dengan tujuan untuk mengembangan monumen hutan alam tropis. Kawasan ini banyak ditumbuhi oleh berbagai tumbuhan hutan hujan tropis, khususnya pohon bangkirai.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinasi" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinasi" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2025 Tripadvisor. All rights reserved.</p>
-            <p>Follow us on:
-                <a href="#" class="text-white text-decoration-none">Facebook</a> | 
-                <a href="#" class="text-white text-decoration-none">Twitter</a> | 
-                <a href="#" class="text-white text-decoration-none">Instagram</a>
-            </p>
+            <p>&copy; 2025 Pesona Balikpapan. All rights reserved.</p>
         </div>
     </footer>
 
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

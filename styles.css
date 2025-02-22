@@ -142,3 +142,22 @@ footer {
         font-size: 2rem;
     }
 }
+
+.like-btn {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.like-btn.liked {
+    color: red;
+}
+
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
