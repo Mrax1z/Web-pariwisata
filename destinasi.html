@@ -5,173 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonderful Destinations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
-        body {
-            background-color: #f5f5f5;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #ffffff;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2d3436;
-        }
-
-        .nav-links a {
-            margin-left: 2rem;
-            text-decoration: none;
-            color: #2d3436;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('img/backgroound.jpg    ') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Destinations Grid */
-        .destinations {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .destination-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .destination-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-content h3 {
-            margin-bottom: 0.5rem;
-            color: #2d3436;
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-            color: #636e72;
-        }
-
-        .location i {
-            margin-right: 0.5rem;
-        }
-
-        .rating {
-            color: #fdcb6e;
-            margin-bottom: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background-color: #0984e3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0773c5;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2d3436;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Pesona Balikpapan</div>
-            <div class="nav-links">
-                <a href="index.html">Beranda</a>
-                <a href="#destinations">Destinasi</a>
-                <a href="contact.html">contact</a>
-            </div>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#"><strong>Tripadvisor</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Destinasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -182,98 +36,104 @@
 
     <section class="destinations" id="destinations">
         <h2>Popular Destinations</h2>
-        <div class="grid">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <!-- Destination Card 1 -->
-            <div class="destination-card">
-                <div class="card-image">
-                    <img src="img/lamaru.jpg" alt="Bali">
-                </div>
-                <div class="card-content">
-                    <h3>Pantai Lamaru</h3>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Jl. Mulawarman 76115 Balikpapan</span>
+            <div class="col">
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="img/lamaru.jpg" alt="Pantai Lamaru">
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                    <div class="card-content">
+                        <h3>Pantai Lamaru</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Mulawarman 76115 Balikpapan</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>Pantai Lamaru adalah destinasi wisata pantai yang sangat cocok untuk dikunjungi oleh keluarga, teman, atau pasangan. Pantai ini menawarkan keindahan alam yang memukau, fasilitas yang lengkap, dan berbagai aktivitas yang menyenangkan.</p>
+                        <a href="lamaru/lamaru.html" class="btn">Explore</a>
                     </div>
-                    <p>Pantai Lamaru adalah destinasi wisata pantai yang sangat cocok untuk dikunjungi oleh keluarga, teman, atau pasangan. Pantai ini menawarkan keindahan alam yang memukau, fasilitas yang lengkap, dan berbagai aktivitas yang menyenangkan.</p>
-                  <br>
-                    <a href="lamaru/lamaru.html" class="btn">Explore</a>
                 </div>
             </div>
 
             <!-- Destination Card 2 -->
-            <div class="destination-card">
-                <div class="card-image">
-                    <img src="img/bekapai.jpg" alt="bekapai">
-                </div>
-                <div class="card-content">
-                    <h3>Taman Bekapai</h3>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Jl. Jenderal Sudirman No.86, RT.11, Damai, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76114</span>
+            <div class="col">
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="img/bekapai.jpg" alt="Taman Bekapai">
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="card-content">
+                        <h3>Taman Bekapai</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Jenderal Sudirman No.86, RT.11, Damai, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76114</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Ruang hijau di tengah kota Balikpapan yang asri dan nyaman dengan fasilitas tempat duduk, jalur pejalan kaki, dan air mancur. Ikon kota Balikpapan ini juga dilengkapi dengan instalasi seni modern yang menarik.</p>
+                        <a href="bekapai/bekapai.html" class="btn">Explore</a>
                     </div>
-                    <p> Ruang hijau di tengah kota Balikpapan yang asri dan nyaman dengan fasilitas tempat duduk, jalur pejalan kaki, dan air mancur. Ikon kota Balikpapan ini juga dilengkapi dengan instalasi seni modern yang menarik.</p>
-                <br>
-                    <a href="bekapai/bekapai.html" class="btn">Explore</a>
                 </div>
             </div>
+
             <!-- Destination Card 3 -->
-            <div class="destination-card">
-                <div class="card-image">
-                    <img src="img/wanadesa.jpeg" alt="Paris">
-                </div>
-                <div class="card-content">
-                    <h3>Wanadesa</h3>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Karang Joang, Balikpapan Utara, Kota Balikpapan, Kalimantan Timur</span>
+            <div class="col">
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="img/wanadesa.jpeg" alt="Wanadesa">
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="card-content">
+                        <h3>Wanadesa</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karang Joang, Balikpapan Utara, Kota Balikpapan, Kalimantan Timur</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Destinasi wisata alam di Balikpapan dengan konsep edukasi dan petualangan. Pengunjung dapat menikmati berbagai kegiatan outdoor dan belajar tentang lingkungan.</p>
+                        <a href="wanadesa/wanadesa.html" class="btn">Explore</a>
                     </div>
-                    <p>Destinasi wisata alam di Balikpapan dengan konsep edukasi dan petualangan. Pengunjung dapat menikmati berbagai kegiatan outdoor dan belajar tentang lingkungan.</p>
-                    <br>
-                    <a href="wanadesa/wanadesa.html" class="btn">Explore</a>
                 </div>
             </div>
+
             <!-- Destination Card 4 -->
-            <div class="destination-card">
-                <div class="card-image">
-                    <img src="img/bukit-bengkirai.webp" alt="bukit-bengkirai">
-                </div>
-                <div class="card-content">
-                    <h3>Bukit Bangkirai</h3>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span> Karya Merdeka, Kec. Samboja, Kabupaten Kutai Kartanegara, Kalimantan Timur</span>
+            <div class="col">
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="img/bukit-bengkirai.webp" alt="Bukit Bangkirai">
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="card-content">
+                        <h3>Bukit Bangkirai</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karya Merdeka, Kec. Samboja, Kabupaten Kutai Kartanegara, Kalimantan Timur</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Kawasan wisata alam di Kutai Kartanegara yang menawarkan keindahan hutan hujan tropis alami. Daya tarik utama tempat ini adalah jembatan gantung yang menghubungkan pohon-pohon raksasa.</p>
+                        <a href="bengkirai/bengkrai.html" class="btn">Explore</a>
                     </div>
-                    <p>Kawasan wisata alam di Kutai Kartanegara yang menawarkan keindahan hutan hujan tropis alami. Daya tarik utama tempat ini adalah jembatan gantung yang menghubungkan pohon-pohon raksasa.</p>
-                   <br>
-                    <a href="bengkirai/bengkrai.html" class="btn">Explore</a>
                 </div>
             </div>
 
@@ -281,8 +141,18 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 TravelGo. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Tripadvisor. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white text-decoration-none">Facebook</a> | 
+                <a href="#" class="text-white text-decoration-none">Twitter</a> | 
+                <a href="#" class="text-white text-decoration-none">Instagram</a>
+            </p>
+        </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
